@@ -16,9 +16,6 @@
   </head>
   <link rel="stylesheet" href="../CSS/CreateProfile.css" />
   <body>
-    <!-- <div class="Heading">
-        
-    </div> -->
     <section class="container">
       <header><b>Create Profile</b></header>
       <form action="" method="post" class="CreateProfile" id="CreateProf">
@@ -65,7 +62,7 @@
                     >Male</label
                   >
                 </div>
-                <div class="sex">
+                <div class="sex-option">
                   <input
                     type="radio"
                     class="form-input"
@@ -75,7 +72,7 @@
                   />
                   <label for="Female" class="form-input">Female</label>
                 </div>
-                <div class="sex">
+                <div class="sex-option">
                   <input
                     type="radio"
                     class="form-input"
@@ -133,10 +130,6 @@
                 required
               />
             </div>
-            <!-- <div class="form--input">
-              <label for="district">District</label>
-              <input type="text" name="district" class="form-input" required />
-            </div> -->
             <div class="form--input">
               <label for="state">State</label>
               <input
@@ -173,7 +166,7 @@
               <input
                 type="text"
                 name="annual_income"
-                class="form--input"
+                class="form-input"
                 placeholder="Enter your annual income"
                 required
               />
@@ -201,7 +194,9 @@
             </div>
           </div>
         </div>
-        <button type="button" class="submitBUtton">Submit</button>
+        <button type="button" class="submitBUtton">
+          <a href="Partner_Preferences.html">Submit</a>
+        </button>
       </form>
     </section>
   </body>

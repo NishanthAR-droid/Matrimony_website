@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `USER_PROFILE`
   `phno` NUMERIC NOT NULL,
   `sex` CHAR NOT NULL,
   `email` VARCHAR NOT NULL,
-  `motherTounge` VARCHAR,
+  `motherToungue` VARCHAR,
   `relegion` VARCHAR,
   `caste` VARCHAR,
   `country_` VARCHAR NOT NULL,
