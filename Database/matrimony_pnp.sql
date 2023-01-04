@@ -151,7 +151,7 @@ ALTER TABLE `image_gallery`
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `pid` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `pid` int(10) NOT NULL AUTO_INCREMENT=100;
 
 --
 -- Constraints for dumped tables
