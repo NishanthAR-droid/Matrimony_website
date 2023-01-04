@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2023 at 11:29 AM
+-- Generation Time: Jan 04, 2023 at 05:52 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -28,9 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `image_gallery` (
-  `img_id` int(10) NOT NULL,
-  `pid` int(10) NOT NULL,
-  `image` varchar(50) NOT NULL
+  `uname` varchar(30) NOT NULL,
+  `image` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -40,9 +39,9 @@ CREATE TABLE `image_gallery` (
 --
 
 CREATE TABLE `user_details` (
-  `pid` int(10) NOT NULL,
-  `fname` varchar(20) NOT NULL,
-  `phno` bigint(10) NOT NULL,
+  `uname` varchar(30) NOT NULL,
+  `fname` varchar(30) NOT NULL,
+  `phno` bigint(15) NOT NULL,
   `sex` char(1) NOT NULL,
   `email` varchar(30) NOT NULL,
   `mother_tongue` varchar(20) NOT NULL,
@@ -53,10 +52,9 @@ CREATE TABLE `user_details` (
   `state` varchar(20) NOT NULL,
   `education` varchar(20) NOT NULL,
   `annual_income` double NOT NULL,
-  `occupation` varchar(20) NOT NULL,
   `about_me` text NOT NULL,
-  `dob` date NOT NULL,
-  `uname` varchar(30) NOT NULL
+  `occupation` varchar(20) NOT NULL,
+  `dob` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -66,7 +64,7 @@ CREATE TABLE `user_details` (
 --
 
 CREATE TABLE `user_feedback` (
-  `pid` int(10) NOT NULL,
+  `uname` varchar(30) NOT NULL,
   `rating` int(2) NOT NULL,
   `feedback` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -89,7 +87,7 @@ CREATE TABLE `user_login` (
 --
 
 CREATE TABLE `user_preferences` (
-  `pid` int(10) NOT NULL,
+  `uname` varchar(30) NOT NULL,
   `sex` char(1) NOT NULL,
   `age` int(11) NOT NULL,
   `annual_income` double NOT NULL,
@@ -109,21 +107,19 @@ CREATE TABLE `user_preferences` (
 -- Indexes for table `image_gallery`
 --
 ALTER TABLE `image_gallery`
-  ADD PRIMARY KEY (`img_id`,`pid`),
-  ADD KEY `pid` (`pid`);
+  ADD PRIMARY KEY (`uname`);
 
 --
 -- Indexes for table `user_details`
 --
 ALTER TABLE `user_details`
-  ADD PRIMARY KEY (`pid`),
-  ADD KEY `user_details_ibfk_1` (`uname`);
+  ADD PRIMARY KEY (`uname`);
 
 --
 -- Indexes for table `user_feedback`
 --
 ALTER TABLE `user_feedback`
-  ADD PRIMARY KEY (`pid`);
+  ADD PRIMARY KEY (`uname`);
 
 --
 -- Indexes for table `user_login`
@@ -135,23 +131,7 @@ ALTER TABLE `user_login`
 -- Indexes for table `user_preferences`
 --
 ALTER TABLE `user_preferences`
-  ADD PRIMARY KEY (`pid`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `image_gallery`
---
-ALTER TABLE `image_gallery`
-  MODIFY `img_id` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `user_details`
---
-ALTER TABLE `user_details`
-  MODIFY `pid` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100;
+  ADD PRIMARY KEY (`uname`);
 
 --
 -- Constraints for dumped tables
@@ -161,7 +141,7 @@ ALTER TABLE `user_details`
 -- Constraints for table `image_gallery`
 --
 ALTER TABLE `image_gallery`
-  ADD CONSTRAINT `image_gallery_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `user_details` (`pid`);
+  ADD CONSTRAINT `image_gallery_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `user_login` (`uname`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `user_details`
@@ -173,13 +153,13 @@ ALTER TABLE `user_details`
 -- Constraints for table `user_feedback`
 --
 ALTER TABLE `user_feedback`
-  ADD CONSTRAINT `user_feedback_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `user_details` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_feedback_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `user_login` (`uname`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `user_preferences`
 --
 ALTER TABLE `user_preferences`
-  ADD CONSTRAINT `user_preferences_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `user_details` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_preferences_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `user_login` (`uname`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
