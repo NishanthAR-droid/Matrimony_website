@@ -1,3 +1,4 @@
+<?php require("db_connect.php");?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -195,7 +196,7 @@
           </div>
         </div>
         <button type="button" class="submitBUtton">
-          <a href="Partner_Preferences.html">Submit</a>
+          <a href="Partner_Preferences.php">Submit</a>
         </button>
       </form>
     </section>

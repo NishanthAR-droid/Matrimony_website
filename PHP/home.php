@@ -1,3 +1,4 @@
+<?php require("db_connect.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login.php">Login</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
@@ -25,29 +26,29 @@
     <div class="ImageContainer">
         <img src="../Images/Holding hands.jpeg" alt="">
     </div>
-    <div class="text">Supporting all forms of love &#128151 &#128107 &#128108 &#128109 &#128151 </div>
+    
+    <div class="text">Supporting all forms of love &#128151 &#128107 &#128108 &#128109 &#128151
+    </div>
     <div class="Sign-up">
-        <form action="" method="post" class="SignUpHeading">
+        <form action="authenticate_signUp.php" method="post" class="SignUpHeading">
             <h1 class="SignUpHeading"> Sign Up </h1>
             <div class="form--input">
                 <label for="Username" class="form--input">Username</label>
-                <input type="username" name="username" class="form-input" placeholder="Create username">
+                <input type="text" name="username" class="form-input" placeholder="Create username" required>
             </div>
             <div class="form--input">
                 <label for="email" class="form--input">Email</label>
-                <input type="Email" name="email" class="form-input" placeholder="123@gmail.com">
+                <input type="Email" name="email" class="form-input" placeholder="123@gmail.com" required>
             </div>
             <div class="form--input">
                 <label for="Phone number" class="form--input">Phone Number</label>
-                <input type="text" name="phone" class="form-input" placeholder="Enter your phone number">
+                <input type="text" name="phone" class="form-input" placeholder="Enter your phone number" required>
             </div>
             <div class="form--input">
                 <label for="password" class="form--input">Password</label>
-                <input type="password" name="password" placeholder="Create password" class="form-input">
+                <input type="password" name="password" placeholder="Create password" class="form-input" required>
             </div>
-            <button type="button" class="form-button"><a href="CreateProfile.html">
-                 Click here to submit and create profile
-            </a></button>
+            <input type="submit" name="submit">
         </form>
     </div>
 </body>
