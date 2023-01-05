@@ -10,9 +10,12 @@
         $count=mysqli_num_rows($result0);
         if ($count)
         {
-            echo "<script> alert(\"Username already exist\")</script>";
-            header("location:home.php");
+            echo "<script>
+            window.location.href='home.php';
+            alert('Username already exist');</script>" ;
+            // header("location:home.php");
         }
+
         else
         {
             $sql="INSERT INTO `USER_LOGIN` VALUES('$username','$passwd')";
@@ -20,7 +23,7 @@
             $result=mysqli_query($conn,$sql);
             $result1=mysqli_query($conn,$sql1);
             if($result && $result1)
-              header("location: CreateProfile.php");
+                header("location: CreateProfile.php");
         }
     }
 ?>

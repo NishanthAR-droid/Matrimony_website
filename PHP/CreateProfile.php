@@ -19,7 +19,7 @@
   <body>
     <section class="container">
       <header><b>Create Profile</b></header>
-      <form action="" method="post" class="CreateProfile" id="CreateProf">
+      <form action="UploadProfileDetails.php" method="post" class="CreateProfile" id="CreateProf">
         <div class="details personal">
           <span class="title"> Personal Details</span>
           <div class="fields">
@@ -185,7 +185,7 @@
             <div class="form--input" id="AboutMe">
               <label for="About me">About me</label>
               <textarea
-                name="textarea"
+                name="aboutme"
                 id="textarea"
                 class="form-input"
                 cols="90"
@@ -193,11 +193,13 @@
                 placeholder="Tell about yourself......"
               ></textarea>
             </div>
+            <div class="form--input">
+              <label for="Image">Upload your picture</label>
+              <input type="file" name="image" class=form-input>
+            </div>
           </div>
         </div>
-        <button type="button" class="submitBUtton">
-          <a href="Partner_Preferences.php">Submit</a>
-        </button>
+        <button type="submit" name="submit" class="submitBUtton">Submit</button>
       </form>
     </section>
   </body>
