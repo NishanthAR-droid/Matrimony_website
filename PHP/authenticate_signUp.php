@@ -14,6 +14,7 @@
                   alert('username already exists');
                   </script>";
         }
+
         else
         {
             $sql="INSERT INTO `USER_LOGIN` VALUES('$username','$passwd')";
