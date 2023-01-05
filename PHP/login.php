@@ -4,6 +4,9 @@
   <style></style>
   <link rel="stylesheet" href="../CSS/login.css" />
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +17,7 @@
       <h1 id="title">Catch your <span class="Title"> match </span></h1>
     </div>
     <div class="Login">
-      <form action="" method="post" class="loginHeading" id="Login">
+      <form action="authenticate_login.php" method="post" class="loginHeading" id="Login">
         <h1 class="loginHeading">Login</h1>
         <div class="form--input">
           <label class="form--input"> Username </label>
@@ -23,6 +26,7 @@
             name="username"
             placeholder="Enter your username"
             class="form-input"
+            required
           />
         </div>
         <div class="form--input">
@@ -32,9 +36,10 @@
             name="password"
             placeholder="Enter your password"
             class="form-input"
+            required
           />
         </div>
-        <button type="button"><a href="">Submit</a></button>
+        <button type="submit" name="submit">Submit</button>
       </form>
     </div>
   </body>

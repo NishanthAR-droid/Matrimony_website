@@ -42,7 +42,7 @@
             </div>
             <div class="form--input">
                 <label for="Phone number" class="form--input">Phone Number</label>
-                <input type="text" name="phone" class="form-input" placeholder="Enter your phone number" required>
+                <input type="text" name="phone" class="form-input" placeholder="Enter your phone number" >
             </div>
             <div class="form--input">
                 <label for="password" class="form--input">Password</label>
