@@ -48,7 +48,7 @@
                 <label for="password" class="form--input">Password</label>
                 <input type="password" name="password" placeholder="Create password" class="form-input" required>
             </div>
-            <input type="submit" name="submit">
+            <button type="submit" name="submit" class="form-button">Click here to create profile</button>
         </form>
     </div>
 </body>
