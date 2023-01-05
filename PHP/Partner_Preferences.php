@@ -1,4 +1,6 @@
-<?php require("db_connect.php");?>
+<?php require("db_connect.php");
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +20,7 @@
   <body>
     <div class="container">
       <header><b>Partner Preference</b></header>
-      <form action="" method="post" class="ParnetPreferences">
+      <form action="UploadPreferences.php" method="post" class="ParnetPreferences">
         <div class="fields">
           <div class="form--input">
             <label for="age"> Age </label>
@@ -122,7 +124,7 @@
               placeholder="Enter mother toungue"
             />
           </div>
-          <button type="button" class="submitBUtton">Submit</button>
+          <button type="submit" name="submit" class="submitBUtton">Submit</button>
         </div>
       </form>
     </div>

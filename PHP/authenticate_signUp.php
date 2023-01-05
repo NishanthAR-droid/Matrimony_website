@@ -24,7 +24,8 @@
             if($result && $result1)
             {
                 session_start();
-                $_session['username']=$username;
+                $_SESSION['username']=$username;
+                // $_SESSION['loginflag'] = TRUE;
                 header("location: CreateProfile.php");
 
             }
