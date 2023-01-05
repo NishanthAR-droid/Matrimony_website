@@ -9,5 +9,7 @@
         $sql1="INSERT INTO `USER_DETAILS`(`email`,`phno`,`uname`) VALUES('$email','$phone','$username')";
         $result=mysqli_query($conn,$sql);
         $result1=mysqli_query($conn,$sql1);
+        if($result && $result1)
+        header("location:CreateProfile.php");
     }
 ?>
