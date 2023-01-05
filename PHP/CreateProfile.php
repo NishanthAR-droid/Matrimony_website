@@ -1,4 +1,10 @@
-<?php require("db_connect.php");?>
+<?php require("db_connect.php");
+session_start();
+// if(!isset($_SESSION['username']))
+// {
+//   header("location:home.php");
+// }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
