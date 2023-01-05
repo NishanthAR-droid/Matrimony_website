@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2023 at 05:52 PM
+-- Generation Time: Jan 05, 2023 at 05:53 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -54,7 +54,8 @@ CREATE TABLE `user_details` (
   `annual_income` double NOT NULL,
   `about_me` text NOT NULL,
   `occupation` varchar(20) NOT NULL,
-  `dob` date NOT NULL
+  `dob` date NOT NULL,
+  `age` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
