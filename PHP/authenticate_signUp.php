@@ -8,10 +8,11 @@
         $sql0="SELECT `uname` FROM `USER_LOGIN` WHERE `uname`='$username'";
         $result0=mysqli_query($conn,$sql0);
         $count=mysqli_num_rows($result0);
-        if ($count)
+        if ($count==1)
         {
-            echo "<script> alert(\"Username already exist\")</script>";
-            header("location:home.php");
+            echo "<script>window.location.href='home.php';
+                  alert('username already exists');
+                  </script>";
         }
         else
         {
@@ -20,7 +21,12 @@
             $result=mysqli_query($conn,$sql);
             $result1=mysqli_query($conn,$sql1);
             if($result && $result1)
-              header("location: CreateProfile.php");
+            {
+                session_start();
+                $_session['username']=$username;
+                header("location: CreateProfile.php");
+
+            }
         }
     }
 ?>
