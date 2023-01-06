@@ -14,9 +14,9 @@
             session_start();
             $_SESSION['username']=$username;
             if($username=='admin')
-             header("location:CreateProfile.php"); //change later
+             header("location:home.php"); //change later
              else
-             header("location:home.php");   //change later        
+             header("location:UserProfile.html");   //change later        
         }
         else
         {
