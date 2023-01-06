@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
 <body>
   <section class="container">
     <header><b>Create Profile</b></header>
-    <form action="UploadProfileDetails.php" method="post" class="CreateProfile" id="CreateProf">
+    <form action="UploadProfileDetails.php" method="post" class="CreateProfile" id="CreateProf" enctype="multipart/form-data">
       <div class="details personal">
         <span class="title"> Personal Details</span>
         <div class="fields">
