@@ -1,8 +1,7 @@
 <?php require("db_connect.php");
 session_start();
-if (!isset($_SESSION['username'])) {
-  header("location:home.php");
-}
+session_unset();
+session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +11,11 @@ if (!isset($_SESSION['username'])) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@1,500&display=swap"
     rel="stylesheet" />
-  <h1 id="title">Catch your <span class="Title"> match </span></h1>
+  <h1 id="title">
+    <img id="logo" src="../Images/IMG_20230106_213725.png" alt="" />
+    Catch your
+    <span class="Title"> match </span>
+  </h1>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

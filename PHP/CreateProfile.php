@@ -12,7 +12,10 @@ if (!isset($_SESSION['username'])) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@1,500&display=swap"
     rel="stylesheet" />
-  <h1 id="title">Catch your <span class="Title"> match </span></h1>
+  <h1 id="title"> <img id="logo" src="../Images/IMG_20230106_213725.png" alt="" />
+    Catch your
+    <span class="Title"> match </span>
+  </h1>
 
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,7 +27,8 @@ if (!isset($_SESSION['username'])) {
 <body>
   <section class="container">
     <header><b>Create Profile</b></header>
-    <form action="UploadProfileDetails.php" method="post" class="CreateProfile" id="CreateProf" enctype="multipart/form-data">
+    <form action="UploadProfileDetails.php" method="post" class="CreateProfile" id="CreateProf"
+      enctype="multipart/form-data">
       <div class="details personal">
         <span class="title"> Personal Details</span>
         <div class="fields">

@@ -1,8 +1,9 @@
-<?php require("db_connect.php");
+<!-- <?php require("db_connect.php");
 session_start();
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +14,14 @@ session_start();
     <title>Home</title>
 </head>
 <link rel="stylesheet" href="../CSS/home.css">
+
 <body>
+    <h1 id="title">
+        <img id="logo" src="../Images/IMG_20230106_213725.png" alt="" />
+        Catch your
+        <span class="Title"> match </span>
+    </h1>
     <div class="container">
-        <h1 id="title">
-            Catch your <span class="Title"> match </span>
-        </h1>
         <nav>
             <ul>
                 <li><a href="login.php">Login</a></li>
@@ -28,7 +32,7 @@ session_start();
     <div class="ImageContainer">
         <img src="../Images/Holding hands.jpeg" alt="">
     </div>
-    
+
     <div class="text">Supporting all forms of love &#128151 &#128107 &#128108 &#128109 &#128151
     </div>
     <div class="Sign-up">
@@ -44,7 +48,7 @@ session_start();
             </div>
             <div class="form--input">
                 <label for="Phone number" class="form--input">Phone Number</label>
-                <input type="text" name="phone" class="form-input" placeholder="Enter your phone number" >
+                <input type="text" name="phone" class="form-input" placeholder="Enter your phone number">
             </div>
             <div class="form--input">
                 <label for="password" class="form--input">Password</label>
@@ -54,7 +58,5 @@ session_start();
         </form>
     </div>
 </body>
-<!-- <script>
-    alert("Welcomee");
-</script> -->
+
 </html>

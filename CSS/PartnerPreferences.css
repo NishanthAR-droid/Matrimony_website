@@ -15,14 +15,22 @@
 #title {
     position: relative;
     width: 1440px;
-    height: 90px;
+    height: 100px;
     width: 100%;
-    padding: 20px;
-    left: 0px;
+    padding: 0px;
     background: #92dce5;
     text-align: center;
     font-size: 3em;
     font-family: 'Lobster', cursive;
+}
+
+#logo {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    padding: 0px;
+    display: inline;
+    top: 20px;
 }
 
 .Title {
