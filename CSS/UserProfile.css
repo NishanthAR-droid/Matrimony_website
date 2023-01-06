@@ -1,0 +1,106 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+ * {
+     position: relative;
+     left: 0px;
+     top: 0px;
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+     align-items: center;
+     justify-items: center;
+     background: #E8AABE;
+ }
+
+ #title {
+     position: relative;
+     width: 1440px;
+     height: 90px;
+     width: 100%;
+     padding: 20px;
+     background: #92dce5;
+     text-align: center;
+     font-size: 3em;
+     font-family: 'Lobster', cursive;
+ }
+
+ nav {
+     display: flex;
+     align-items: center;
+     padding-top: 40px;
+     padding-left: 5%;
+     padding-right: 10%;
+     background-color: #231b43;
+     height: 75px;
+ }
+
+ nav ul li {
+     list-style-type: none;
+     display: inline-block;
+     padding: 10px 10px;
+ }
+
+ nav ul li a {
+     color: rgb(0, 0, 0);
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 1.25em;
+ }
+
+ nav ul li a:hover {
+     color: #ea1538;
+     transition: .3s;
+     background-color: rgb(171, 197, 222);
+ }
+
+ .Profile {
+     width: 1450px;
+     position: relative;
+     display: flex;
+ }
+
+ .Profile .left {
+     /* width: 35%; */
+     background: linear-gradient(to right, #92dce5, #01dbdf);
+     padding: 15px 25px;
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+     text-align: center;
+     font-size: 25px;
+ }
+
+ .Profile .left img {
+     /* margin-bottom: 10px; */
+     border-radius: 10px;
+     width: 50%;
+     height: 50%;
+ }
+
+ .Profile .right {
+     background: #E8AABE;
+     padding: 30px 25px;
+     width: 100%;
+     position: relative;
+     /* top: -150px; */
+ }
+
+ .Profile .right .details {
+     margin-bottom: 25px;
+     /* margin-top: 25px; */
+ }
+
+ .Profile .right .details h2 {
+     margin-bottom: 15px;
+     padding-bottom: 5px;
+     border-bottom: 1px solid black;
+ }
+
+ .Profile .right .details-data {
+     margin-bottom: 10px;
+     /* display: flex;
+     justify-content: space-evenly; */
+ }
+
+ .Profile .right .details-data .data {
+     margin: 10px;
+ }
