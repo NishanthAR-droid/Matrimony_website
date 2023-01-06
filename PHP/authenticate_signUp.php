@@ -25,7 +25,6 @@
             {
                 session_start();
                 $_SESSION['username']=$username;
-                // $_SESSION['loginflag'] = TRUE;
                 header("location: CreateProfile.php");
 
             }
