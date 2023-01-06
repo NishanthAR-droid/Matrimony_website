@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2023 at 05:53 PM
+-- Generation Time: Jan 06, 2023 at 12:06 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -90,8 +90,10 @@ CREATE TABLE `user_login` (
 CREATE TABLE `user_preferences` (
   `uname` varchar(30) NOT NULL,
   `sex` char(1) NOT NULL,
-  `age` int(11) NOT NULL,
-  `annual_income` double NOT NULL,
+  `minage` int(11) NOT NULL,
+  `maxage` int(11) NOT NULL,
+  `min_annual_income` double NOT NULL,
+  `max_annual_income` double NOT NULL,
   `caste` varchar(20) NOT NULL,
   `religion` varchar(20) NOT NULL,
   `country` varchar(20) NOT NULL,
