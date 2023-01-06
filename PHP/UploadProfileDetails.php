@@ -2,7 +2,8 @@
 include("db_connect.php");
 session_start();
 if (isset($_POST["submit"])) {
-    // $username=$_POST["username"];
+    $image=addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
+    $imagetype= $_FILES["image"]["type"];
     $username = $_SESSION['username'];
     $fullname = $_POST["name"];
     $dateofbirth = $_POST["dateofbirth"];
@@ -20,11 +21,11 @@ if (isset($_POST["submit"])) {
     $sql = "UPDATE `USER_DETAILS` SET `fname`='$fullname',`sex`='$sex',`mother_tongue`='$mother_toungue',
            `religion`='$religion',`caste`='$caste',`country`='$country',`city`='$city',`state`='$state',
            `education`='$education',`annual_income`='$annual_income',`about_me`='$about_me',`occupation`='$occupation',
-           `dob`='$dateofbirth' WHERE `uname`='$username'";
+           `dob`='$dateofbirth',`age`=TIMESTAMPDIFF(YEAR,'$dateofbirth',CURDATE()) WHERE `uname`='$username'";
     $result = mysqli_query($conn, $sql);
-    $sql1 = "UPDATE `USER_DETAILS` SET `age`=TIMESTAMPDIFF(YEAR,'$dateofbirth',CURDATE()) WHERE `uname`='$username'";
-    $result1 = mysqli_query($conn, $sql1);
-    if ($result)
+    $sql1="INSERT INTO `image_gallery` (`uname`,`image`,`image_type`) values ('$username','$image','$imagetype')";
+    $result1= mysqli_query($conn,$sql1);
+    if ($result && $result1)
         header("location:Partner_Preferences.php");
 }
 ?>
