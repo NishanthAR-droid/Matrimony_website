@@ -1,7 +1,8 @@
 <?php require("db_connect.php");
 session_start();
-session_unset();
-session_destroy();
+if (!isset($_SESSION['username'])) {
+  header("location:home.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
