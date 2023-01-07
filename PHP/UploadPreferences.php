@@ -57,6 +57,6 @@ if (isset($_POST["submit"])) {
     $sql = "INSERT INTO `user_preferences` (`uname`,`sex`,`minage`,`maxage`,`min_annual_income`,`max_annual_income`,`caste`,`religion`,`country`,`state`,`city`,`mother_tongue`) values ('$username','$sex','$minage','$maxage','$minincome','$maxincome','$caste','$religion','$country','$state','$city','$mother_toungue')";
     $result = mysqli_query($conn, $sql);
     if ($result)
-        header("location:UserProfile.html");
+        header("location:imagetest.php");
 }
 ?>
