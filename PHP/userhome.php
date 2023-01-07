@@ -13,7 +13,7 @@ else {
     $row1=mysqli_fetch_assoc($result1);
     $image=$row1['image'];
     $fullname=$row['fname'];
-    $about_me=$row[];
+    $about_me=$row['about_me'];
     $email=$row['email'];
     $sex=$row['sex'];
     $religion=$row['religion'];
@@ -25,6 +25,8 @@ else {
     $education=$row['education'];
     $annual_income=$row['annual_income'];
     $occupation=$row['occupation'];
+    $dob=$row['dob'];
+    $age=$row['age'];
 }
 ?>
 <!DOCTYPE html>
@@ -60,14 +62,10 @@ else {
     </div>
     <div class="Profile">
       <div class="left">
-        <img src="../Images/profile pic 2.jpeg" alt="" class="left" />
-        <h1 class="left">Prajwal Surendra</h1>
+      <?php echo '<img src="data:image;base64,'.base64_encode($image).'" alt="Image" style="width: 400px;height: 400px;">' ?>
+        <h1 class="left"><?php echo $fullname ?></h1>
         <p class="left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-          maxime quia fuga laborum aliquam quo deserunt, sunt totam nostrum eum,
-          non perspiciatis fugit quisquam distinctio. Debitis obcaecati ea sit
-          doloremque nam odio, tempora, reiciendis error iste amet possimus,
-          neque quo!
+          <?php echo $about_me ?>
         </p>
       </div>
       <div class="right">
@@ -75,52 +73,62 @@ else {
           <h2>Personal Details</h2>
           <div class="details-data">
             <div class="data">
-              <p><b>Email:</b> prajwalsurendra7178@gmail.com</p>
+              <p><b>Email:</b> <?php echo $email ?></p>
               <p></p>
             </div>
 
             <div class="data">
-              <p><b>Gender:</b> Male</p>
+              <p><b>Gender:</b> <?php echo $sex ?></p>
               <p></p>
             </div>
 
             <div class="data">
-              <p><b>Religion:</b> Hindu</p>
+              <p><b>Religion:</b> <?php echo $religion ?></p>
             </div>
 
             <div class="data">
-              <p><b>Caste:</b> Vishwakarma</p>
+              <p><b>Caste:</b> <?php echo $caste ?></p>
               <p></p>
             </div>
 
             <div class="data">
-              <p><b>Mother Tongue:</b> Kannada</p>
+              <p><b>Age:</b> <?php echo $age ?></p>
+              <p></p>
+            </div>
+
+            <div class="data">
+              <p><b>Date of Birth:</b> <?php echo $dob ?></p>
+              <p></p>
+            </div>
+
+            <div class="data">
+              <p><b>Mother Tongue:</b> <?php echo $mother_tongue ?></p>
               <p></p>
             </div>
           </div>
           <h2>Other Details</h2>
           <div class="details-data">
             <div class="data">
-              <p><b>City:</b> Bengaluru</p>
+              <p><b>City:</b> <?php echo $city ?></p>
               <p></p>
             </div>
 
             <div class="data">
-              <p><b>State:</b> Karnataka</p>
+              <p><b>State:</b> <?php echo $state ?></p>
               <p></p>
             </div>
 
             <div class="data">
-              <p><b>Country:</b> India</p>
+              <p><b>Country:</b> <?php echo $country ?></p>
             </div>
             <div class="data">
-              <p><b>Education:</b> BE</p>
+              <p><b>Education:</b> <?php echo $education ?></p>
             </div>
             <div class="data">
-              <p><b>Income:</b> 10</p>
+              <p><b>Income:</b> <?php echo $annual_income ?></p>
             </div>
             <div class="data">
-              <p><b>Occupation:</b> fdnjfkd</p>
+              <p><b>Occupation:</b> <?php echo $occupation ?></p>
             </div>
           </div>
         </div>
