@@ -55,8 +55,9 @@ else {
         <ul>
           <li><a href="userhome.php">Home</a></li>
           <li><a href="#">Matches</a></li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="Feedback.php">Feedback</a></li>
           <li><a href="#">About us</a></li>
+          <li><a href="logout.php">Logout</a></li>
         </ul>
       </nav>
     </div>
