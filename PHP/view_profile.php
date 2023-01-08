@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
   header("location:home.php");
 }
 else {
-    $username = $_SESSION['username'];
+    $username = $_GET['id'];
     $sql="SELECT * FROM `user_details` where `uname`='$username'";
     $result=mysqli_query($conn,$sql);
     $row=mysqli_fetch_assoc($result);
@@ -44,7 +44,6 @@ else {
     <title>User Profile</title>
   </head>
   <link rel="stylesheet" href="../CSS/UserProfile.css" />
-  <link rel="stylesheet" href="../CSS/Matches.css" />
   <body>
     <h1 id="title">
       <img id="logo" src="../Images/IMG_20230106_213725.png" alt="" />
@@ -52,29 +51,12 @@ else {
       <span class="Title"> match </span>
     </h1>
     <div class="container">
-    <nav>
+      <nav>
         <ul>
           <li><a href="userhome.php">Home</a></li>
-          <li class="navbar">
-            <a href="#">Matches</a>
-            <ul>
-              <li><a href="Matches_sex.html">Based on Sex</a></li>
-              <li><a href="Matches_income.html">Based on Income</a></li>
-              <li><a href="Matches_occupation.html">Based on Occupation</a></li>
-              <li><a href="Matches_caste.html">Based on Caste</a></li>
-              <li><a href="Matches_religion.html">Based on Religion</a></li>
-              <li>
-                <a href="Matches_motherTongue.html">Based on Mother Tongue</a>
-              </li>
-              <li><a href="Matches_age.html">Based on Age</a></li>
-              <li><a href="Matches_city.html">Based on City</a></li>
-              <li><a href="Matches_state.html">Based on State</a></li>
-              <li><a href="Matches_country.html">Based on Country</a></li>
-            </ul>
-          </li>
-          <li><a href="Feedback.php">Feedback</a></li>
-          <li><a href="#">About us</a></li>
+          <li><a href="#">Matches</a></li>
           <li><a href="logout.php">Logout</a></li>
+          <li><a href="#">About us</a></li>
         </ul>
       </nav>
     </div>
