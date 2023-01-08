@@ -12,7 +12,7 @@ else {
     $country=$row['country'];
     $sex=$row['sex'];
     
-    $sql1="SELECT *FROM `user_details` WHERE `country`= '$country' AND `sex`='$sex'";
+    $sql1="SELECT *FROM `user_details` WHERE `country`= '$country' AND `sex`='$sex' AND `uname`<> '$username'";
     $result1=mysqli_query($conn,$sql1);
     $count=mysqli_num_rows($result1);
     if ($count==0)

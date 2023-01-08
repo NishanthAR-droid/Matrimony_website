@@ -12,7 +12,7 @@ else {
     $maxage=$row['maxage'];
     $sex=$row['sex'];
     $i=1;
-    $sql1="SELECT *FROM `user_details` WHERE `age` BETWEEN $minage AND $maxage AND `sex`='$sex'";
+    $sql1="SELECT *FROM `user_details` WHERE `age` BETWEEN $minage AND $maxage AND `sex`='$sex' AND `uname`<> '$username'";
     $result1=mysqli_query($conn,$sql1);
     $count=mysqli_num_rows($result1);
     if ($count==0)

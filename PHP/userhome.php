@@ -114,7 +114,7 @@ else {
             </div>
 
             <div class="data">
-              <p><b>Date of Birth:</b> <?php echo $dob ?></p>
+              <p><b>Date of Birth:</b> <?php echo date('d M Y', strtotime($dob)); ?></p>
               <p></p>
             </div>
 

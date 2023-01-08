@@ -41,10 +41,10 @@ if (!isset($_SESSION['username'])) {
               <input type="radio" class="form-input" name="sex" value="F" id="checkfemale" />
               <label for="Female" class="form-input">Female</label>
             </div>
-            <div class="sex-option">
+            <!-- <div class="sex-option">
               <input type="radio" class="form-input" name="sex" value="Bi" id="checkfemale" />
               <label for="Female" class="form-input">Bisexual</label>
-            </div>
+            </div> -->
             <div class="sex-option">
               <input type="radio" class="form-input" name="sex" value="O" id="checkothers" />
               <label for="Others" class="form-input">Others</label>
@@ -55,7 +55,7 @@ if (!isset($_SESSION['username'])) {
           <label for="age"> Age </label>
           <select name="age" id="age" class="form-input">
             <option value="18 to 22">18 to 22</option>
-            <option value="23 to 27">18 to 27</option>
+            <option value="23 to 27">23 to 27</option>
             <option value="28 to 35">28 to 35</option>
             <option value="above 35">Above 35</option>
           </select>

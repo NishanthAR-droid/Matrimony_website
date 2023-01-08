@@ -12,7 +12,7 @@ else {
     $mother_tongue=$row['mother_tongue'];
     $sex=$row['sex'];
     
-    $sql1="SELECT *FROM `user_details` WHERE `mother_tongue`= '$mother_tongue' AND `sex`='$sex'";
+    $sql1="SELECT *FROM `user_details` WHERE `mother_tongue`= '$mother_tongue' AND `sex`='$sex' AND `uname`<> '$username'";
     $result1=mysqli_query($conn,$sql1);
     $count=mysqli_num_rows($result1);
     if ($count==0)
