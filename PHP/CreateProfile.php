@@ -48,7 +48,7 @@ if (!isset($_SESSION['username'])) {
             </div> -->
           <div class="form--input" id="DateOfBirth">
             <label for="DateOfBirth">Date of birth</label>
-            <input type="date" name="dateofbirth" class="form-input" min="1950-12-31" max="2020-12-31" required />
+            <input type="date" name="dateofbirth" class="form-input" min="1950-12-31" max="2004-12-31" required />
           </div>
 
           <div class="form--input">
