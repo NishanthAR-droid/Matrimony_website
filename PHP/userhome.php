@@ -58,18 +58,14 @@ else {
           <li class="navbar">
             <a href="#">Matches</a>
             <ul>
-              <li><a href="Matches_sex.html">Based on Sex</a></li>
-              <li><a href="Matches_income.html">Based on Income</a></li>
-              <li><a href="Matches_occupation.html">Based on Occupation</a></li>
-              <li><a href="Matches_caste.html">Based on Caste</a></li>
-              <li><a href="Matches_religion.html">Based on Religion</a></li>
-              <li>
-                <a href="Matches_motherTongue.html">Based on Mother Tongue</a>
-              </li>
-              <li><a href="Matches_age.html">Based on Age</a></li>
-              <li><a href="Matches_city.html">Based on City</a></li>
-              <li><a href="Matches_state.html">Based on State</a></li>
-              <li><a href="Matches_country.html">Based on Country</a></li>
+              <li><a href="Matches_income.php">Based on Income</a></li>              
+              <li><a href="Matches_caste.php">Based on Caste</a></li>
+              <li><a href="Matches_religion.php">Based on Religion</a></li>
+              <li><a href="Matches_motherTongue.php">Based on Mother Tongue</a></li>
+              <li><a href="Matches_age.php">Based on Age</a></li>
+              <li><a href="Matches_city.php">Based on City</a></li>
+              <li><a href="Matches_state.php">Based on State</a></li>
+              <li><a href="Matches_country.php">Based on Country</a></li>
             </ul>
           </li>
           <li><a href="Feedback.php">Feedback</a></li>

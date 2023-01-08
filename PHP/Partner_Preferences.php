@@ -29,16 +29,7 @@ if (!isset($_SESSION['username'])) {
     <header><b>Partner Preference</b></header>
     <form action="UploadPreferences.php" method="post" class="ParnetPreferences">
       <div class="fields">
-        <div class="form--input">
-          <label for="age"> Age </label>
-          <select name="age" id="age" class="form-input">
-            <option value="18 to 22">18 to 22</option>
-            <option value="23 to 27">18 to 27</option>
-            <option value="28 to 35">28 to 35</option>
-            <option value="above 35">Above 35</option>
-          </select>
-        </div>
-        <div class="form--input">
+      <div class="form--input">
           <div class="sex">
             <label for="Sex">Sex</label>
             <div class="sex-option">
@@ -51,10 +42,23 @@ if (!isset($_SESSION['username'])) {
               <label for="Female" class="form-input">Female</label>
             </div>
             <div class="sex-option">
+              <input type="radio" class="form-input" name="sex" value="Bi" id="checkfemale" />
+              <label for="Female" class="form-input">Bisexual</label>
+            </div>
+            <div class="sex-option">
               <input type="radio" class="form-input" name="sex" value="O" id="checkothers" />
               <label for="Others" class="form-input">Others</label>
             </div>
           </div>
+        </div>
+        <div class="form--input">
+          <label for="age"> Age </label>
+          <select name="age" id="age" class="form-input">
+            <option value="18 to 22">18 to 22</option>
+            <option value="23 to 27">18 to 27</option>
+            <option value="28 to 35">28 to 35</option>
+            <option value="above 35">Above 35</option>
+          </select>
         </div>
         <div class="form--input">
           <label for="AnnualIncome"> Annual Income </label>
@@ -66,16 +70,12 @@ if (!isset($_SESSION['username'])) {
           </select>
         </div>
         <div class="form--input">
-          <label for="caste">Caste</label>
-          <input type="text" name="caste" class="form-input" placeholder="Enter caste" />
-        </div>
-        <div class="form--input">
-          <label for="City">City</label>
-          <input type="text" name="city" class="form-input" placeholder="Enter city" />
-        </div>
-        <div class="form--input">
           <label for="religion">Religion</label>
           <input type="text" name="religion" class="form-input" placeholder="Enter religion" />
+        </div>
+        <div class="form--input">
+          <label for="caste">Caste</label>
+          <input type="text" name="caste" class="form-input" placeholder="Enter caste" />
         </div>
         <div class="form--input">
           <label for="country">Country</label>
@@ -84,6 +84,10 @@ if (!isset($_SESSION['username'])) {
         <div class="form--input">
           <label for="state">State</label>
           <input type="text" name="state" class="form-input" placeholder="Enter state" />
+        </div>
+        <div class="form--input">
+          <label for="City">City</label>
+          <input type="text" name="city" class="form-input" placeholder="Enter city" />
         </div>
         <div class="form--input">
           <label for="mother_toungue">Mother Toungue</label>

@@ -25,9 +25,8 @@ session_start();
         <nav>
             <ul>
                 <li><a href="login.php">Login</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="adminlogin.html">Admin login</a></li>
-
+                <li><a href="adminlogin.php">Admin login</a></li>
+                <li><a href="#">About</a></li>                
             </ul>
         </nav>
     </div>

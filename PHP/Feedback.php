@@ -20,6 +20,7 @@ if ($count == 1) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../CSS/Feedback.css" />
+    <link rel="stylesheet" href="../CSS/Matches.css" />
   </head>
   <body>
     <h1 id="title">
@@ -31,7 +32,19 @@ if ($count == 1) {
       <nav>
         <ul>
           <li><a href="userhome.php">Home</a></li>
-          <li><a href="#">Matches</a></li>
+          <li class="navbar">
+            <a href="#">Matches</a>
+            <ul>
+              <li><a href="Matches_income.php">Based on Income</a></li>              
+              <li><a href="Matches_caste.php">Based on Caste</a></li>
+              <li><a href="Matches_religion.php">Based on Religion</a></li>
+              <li><a href="Matches_motherTongue.php">Based on Mother Tongue</a></li>
+              <li><a href="Matches_age.php">Based on Age</a></li>
+              <li><a href="Matches_city.php">Based on City</a></li>
+              <li><a href="Matches_state.php">Based on State</a></li>
+              <li><a href="Matches_country.php">Based on Country</a></li>
+            </ul>
+          </li>
           <li><a href="Feedback.php">Feedback</a></li>
           <li><a href="#">About us</a></li>
           <li><a href="logout.php">Logout</a></li>
