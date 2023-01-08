@@ -5,21 +5,36 @@ if (isset($_POST['submit'])) {
    $sql = "SELECT *FROM `USER_LOGIN` WHERE `uname`='$username'";
    $result = mysqli_query($conn, $sql);
    $count = mysqli_num_rows($result);
-   if ($count == 1) {
+   if ($count == 1) 
+   {
       $row = mysqli_fetch_assoc($result);
-      if ($passwd == $row['passwd']) {
+      if ($passwd == $row['passwd']) 
+      {
          session_start();
          $_SESSION['username'] = $username;
          if ($username == 'admin')
-            header("location:adminlogin.html"); //change later
+            header("location:adminhome.php"); 
          else
             header("location:userhome.php");
-      } else {
-         echo "<script>window.location.href='login.php';
-          alert('incorrect password');
-          </script>";
+      } 
+      else 
+      {
+         if ($username == 'admin') 
+         {
+           echo "<script>window.location.href='adminlogin.php';
+                 alert('incorrect password');
+                 </script>";
+         }
+      else
+       {
+            echo "<script>window.location.href='login.php';
+            alert('incorrect password');
+            </script>";
       }
-   } else {
+      }
+   } 
+   else 
+   {
       echo "<script>window.location.href='home.php';
         alert('account not created,first signup');
         </script>";
