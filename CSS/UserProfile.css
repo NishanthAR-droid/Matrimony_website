@@ -10,6 +10,7 @@
      align-items: center;
      justify-items: center;
      background: #E8AABE;
+     overflow: auto;
  }
 
  #title {
@@ -22,6 +23,14 @@
      text-align: center;
      font-size: 3em;
      font-family: 'Lobster', cursive;
+ }
+
+ .container {
+     width: 100%;
+     height: 75px;
+     margin: 0;
+     z-index: 50;
+     position: relative;
  }
 
  #logo {
@@ -45,8 +54,9 @@
 
  nav ul li {
      list-style-type: none;
-     display: inline-block;
+     display: inline;
      padding: 10px 10px;
+     background-color: #E8AABE;
  }
 
  nav ul li a {
@@ -54,6 +64,12 @@
      text-decoration: none;
      font-weight: bold;
      font-size: 1.25em;
+     background-color: #E8AABE;
+ }
+
+ body {
+     margin: auto;
+
  }
 
  nav ul li a:hover {
@@ -112,4 +128,25 @@
 
  .Profile .right .details-data .data {
      margin: 10px;
+ }
+
+
+ .navbar ul {
+     display: none;
+     height: none;
+     margin: 0px;
+     padding: 0px;
+ }
+
+ .navbar:hover ul {
+     display: flex;
+     flex-flow: column;
+ }
+
+ .navbar ul li {
+     color: rgb(0, 0, 0);
+ }
+
+ .navbar ul li a:hover {
+     background-color: rgb(171, 197, 222);
  }
