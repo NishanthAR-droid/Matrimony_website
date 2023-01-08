@@ -13,7 +13,7 @@ else {
     $sex=$row['sex'];
     $i=1;
 
-    $sql1="SELECT *FROM `user_details` WHERE `annual_income` BETWEEN $min_income AND $max_income AND `sex`='$sex'";
+    $sql1="SELECT *FROM `user_details` WHERE `annual_income` BETWEEN $min_income AND $max_income AND `sex`='$sex' AND `uname`<> '$username'";
     $result1=mysqli_query($conn,$sql1);
     $count=mysqli_num_rows($result1);
     if ($count==0)
