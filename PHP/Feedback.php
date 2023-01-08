@@ -1,3 +1,18 @@
+<?php require("db_connect.php");
+session_start();
+if (!isset($_SESSION['username'])) {
+  header("location:home.php");
+}
+$username = $_SESSION['username'];
+$sql = "SELECT *FROM `user_feedback` WHERE `uname`='$username'";
+$result = mysqli_query($conn, $sql);
+$count = mysqli_num_rows($result);
+if ($count == 1) {
+    echo "<script>window.location.href='userhome.php'; 
+    alert('You have already given feedback');
+    </script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,16 +30,16 @@
     <div class="container">
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="userhome.php">Home</a></li>
           <li><a href="#">Matches</a></li>
-          <li><a href="Feedback.html">Feedback</a></li>
+          <li><a href="Feedback.php">Feedback</a></li>
           <li><a href="#">About us</a></li>
           <li><a href="logout.php">Logout</a></li>
         </ul>
       </nav>
     </div>
     <div class="container-form">
-      <form action="" method="post" class="feedback-form">
+      <form action="uploadFeedback.php" method="post" class="feedback-form">
         <div class="input">
           <label for="Feedback">Give your feedback</label><br />
           <textarea
