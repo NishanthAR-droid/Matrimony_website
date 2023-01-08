@@ -78,7 +78,7 @@
      width: 550px;
      height: 588px;
      left: 1000px;
-     top: 165px;
+     top: 175px;
      background-color: white;
 
  }
@@ -130,14 +130,6 @@
      background-color: white;
  }
 
- /* .formInput{
-        text-align: center;
-        margin : 1rem;
-    } */
- .formInputErrorMessage {
-     color: var(--color--error);
- }
-
  .form-button {
      border: none;
      background: #92dce5;
@@ -165,8 +157,7 @@
      height: 50px;
      left: 100.02px;
      right: 500.98px;
-     top: 670.79px;
-
+     top: 680px;
      font-family: monospace;
      font-style: normal;
      font-weight: 400;

@@ -1,4 +1,4 @@
-<?php require("db_connect.php");?> 
+<?php require("db_connect.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +24,7 @@
             <ul>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="adminlogin.php">Admin login</a></li>
-                <li><a href="aboutUs.php">About Us</a></li>                
+                <li><a href="aboutUs.php">About Us</a></li>
             </ul>
         </nav>
     </div>
