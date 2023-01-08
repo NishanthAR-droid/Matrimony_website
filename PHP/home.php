@@ -1,6 +1,4 @@
-<!-- <?php require("db_connect.php");
-session_start();
-?> -->
+<?php require("db_connect.php");?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +24,7 @@ session_start();
             <ul>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="adminlogin.php">Admin login</a></li>
-                <li><a href="aboutUs.php">About Us</a></li>                
+                <li><a href="userAboutUs.php">About Us</a></li>                
             </ul>
         </nav>
     </div>

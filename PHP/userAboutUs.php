@@ -1,4 +1,9 @@
-<?php require("db_connect.php");?>
+<?php require("db_connect.php");
+session_start();
+if (!isset($_SESSION['username'])) {
+  header("location:home.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../CSS/AboutUs.css" />
+    <link rel="stylesheet" href="../CSS/Matches.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,12 +27,28 @@
       <span class="Title"> match </span>
     </h1>
     <div class="container">
-      <nav>
+    <nav>
         <ul>
-          <li><a href="home.php">Home</a></li>
-          <li><a href="login.php">Login</a></li>
-          <li><a href="adminlogin.php">Admin login</a></li>
-          <li><a href="aboutUs.php">About Us</a></li>
+          <li><a href="userhome.php">Home</a></li>
+          <li class="navbar">
+            <a href="#">Matches</a>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li><a href="Matches_income.php">Based on Income</a></li>              
+              <li><a href="Matches_caste.php">Based on Caste</a></li>
+              <li><a href="Matches_religion.php">Based on Religion</a></li>
+              <li><a href="Matches_motherTongue.php">Based on Mother Tongue</a></li>
+              <li><a href="Matches_age.php">Based on Age</a></li>
+              <li><a href="Matches_city.php">Based on City</a></li>
+              <li><a href="Matches_state.php">Based on State</a></li>
+              <li><a href="Matches_country.php">Based on Country</a></li>
+            </ul>
+          </li>
+          <li><a href="Feedback.php">Feedback</a></li>
+          <li><a href="userAboutUs.php">About us</a></li>
+          <li><a href="logout.php">Logout</a></li>
         </ul>
       </nav>
     </div>

@@ -50,7 +50,10 @@ else {
           <li><a href="userhome.php">Home</a></li>
           <li class="navbar">
             <a href="#">Matches</a>
-            <ul>              
+            <ul>  
+              <li></li>
+              <li></li>
+              <li></li>            
               <li><a href="Matches_income.php">Based on Income</a></li>              
               <li><a href="Matches_caste.php">Based on Caste</a></li>
               <li><a href="Matches_religion.php">Based on Religion</a></li>
@@ -62,7 +65,7 @@ else {
             </ul>
           </li>
           <li><a href="Feedback.php">Feedback</a></li>
-          <li><a href="aboutUs.php">About us</a></li>
+          <li><a href="userAboutUs.php">About us</a></li>
           <li><a href="logout.php">Logout</a></li>
         </ul>
       </nav>
