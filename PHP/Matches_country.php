@@ -62,7 +62,7 @@ else {
             </ul>
           </li>
           <li><a href="Feedback.php">Feedback</a></li>
-          <li><a href="#">About us</a></li>
+          <li><a href="aboutUs.php">About us</a></li>
           <li><a href="logout.php">Logout</a></li>
         </ul>
       </nav>

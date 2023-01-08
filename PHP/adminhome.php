@@ -35,7 +35,7 @@ else {
       <nav>
         <ul>
           <li><a href="adminhome.php">Home</a></li>
-          <li><a href="#">View Feedback</a></li>
+          <li><a href="viewFeedback.php">View Feedback</a></li>
           <li><a href="logout.php">Logout</a></li>
         </ul>
       </nav>
