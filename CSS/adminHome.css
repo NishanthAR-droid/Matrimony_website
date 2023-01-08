@@ -73,25 +73,6 @@
      background-color: rgb(171, 197, 222);
  }
 
- .navbar ul {
-     display: none;
-     height: none;
-     margin: 0px;
-     padding: 0px;
- }
-
- .navbar:hover ul {
-     display: flex;
-     flex-flow: column;
- }
-
- .navbar ul li {
-     color: rgb(0, 0, 0);
- }
-
- .navbar ul li a:hover {
-     background-color: rgb(171, 197, 222);
- }
 
  body {
      margin: auto;
@@ -153,7 +134,7 @@
  .action_button {
      display: flex;
      justify-content: center;
-     gap: 10px;
+     gap: 50px;
  }
 
  .action_button a {
@@ -173,5 +154,5 @@
  }
 
  table>tbody td {
-     padding: 50px;
+     padding: 80px;
  }

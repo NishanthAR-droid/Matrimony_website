@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
          session_start();
          $_SESSION['username'] = $username;
          if ($username == 'admin')
-            header("location:CreateProfile.php"); //change later
+            header("location:adminlogin.html"); //change later
          else
             header("location:userhome.php");
       } else {

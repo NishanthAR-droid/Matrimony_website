@@ -7,29 +7,28 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    /* #E8AABE */
-    background-image: url(../Images/login.jpg);
+    background: #E8AABE;
     background-repeat: no-repeat;
     background-size: 1600px 800px;
 }
 
 .Login {
+
     position: absolute;
-    width: 550px;
+    width: 500px;
     height: 588px;
-    left: 1000px;
+    left: 550px;
     top: 165px;
     background-image: none;
 }
 
 .loginHeading {
-    /* background-color: white; */
+    background-color: white;
     text-align: center;
-    padding-top: 15px;
+    padding: 15px;
+
     margin-bottom: 2em;
     margin: auto;
-
-
 }
 
 form {
@@ -50,7 +49,7 @@ form label {
     border-radius: 0.5rem;
     border: 1px solid #dddddd;
     background: #eeeeee;
-    transition: background 0.2s, border-color 0.2s;
+    transition: background 0.2s;
 }
 
 .form-input:focus {
@@ -61,18 +60,19 @@ form label {
 
 button {
     border: none;
-    background: #ea1538;
+    background: #3d9dca;
     margin-top: 30px;
     padding: 12px 30px 12px 15px;
-    border-radius: 12px;
-    color: #ea1538;
+    border-radius: 5px;
+    color: white;
     font-weight: bold;
-    font-size: 10px;
+    justify-self: center;
+    font-size: 15px;
     transition: .4s;
 }
 
 button:hover {
-    transform: scale(1.3);
+    transform: scale(0.8);
 }
 
 #title {
