@@ -10,14 +10,11 @@ if (!isset($_SESSION['username'])) {
   $i = 1;
   $caste = $row['caste'];
   $sex = $row['sex'];
-  if ($sex == 'B')
-  {
+  if ($sex == 'B') {
     $sql1 = "SELECT *FROM `user_details` WHERE `caste`= '$caste' AND `sex` IN ('M','F') AND `uname`<> '$username' ORDER BY `fname`";
     $result1 = mysqli_query($conn, $sql1);
     $count = mysqli_num_rows($result1);
-  }
-  else
-  {
+  } else {
     $sql1 = "SELECT *FROM `user_details` WHERE `caste`= '$caste' AND `sex`='$sex' AND `uname`<> '$username' ORDER BY `fname`";
     $result1 = mysqli_query($conn, $sql1);
     $count = mysqli_num_rows($result1);
