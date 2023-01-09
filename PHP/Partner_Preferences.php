@@ -29,7 +29,7 @@ if (!isset($_SESSION['username'])) {
     <header><b>Partner Preference</b></header>
     <form action="UploadPreferences.php" method="post" class="ParnetPreferences">
       <div class="fields">
-      <div class="form--input">
+        <div class="form--input">
           <div class="sex">
             <label for="Sex">Sex</label>
             <div class="sex-option">
@@ -41,10 +41,10 @@ if (!isset($_SESSION['username'])) {
               <input type="radio" class="form-input" name="sex" value="F" id="checkfemale" />
               <label for="Female" class="form-input">Female</label>
             </div>
-            <!-- <div class="sex-option">
+            <div class="sex-option">
               <input type="radio" class="form-input" name="sex" value="Bi" id="checkfemale" />
               <label for="Female" class="form-input">Bisexual</label>
-            </div> -->
+            </div>
             <div class="sex-option">
               <input type="radio" class="form-input" name="sex" value="O" id="checkothers" />
               <label for="Others" class="form-input">Others</label>
