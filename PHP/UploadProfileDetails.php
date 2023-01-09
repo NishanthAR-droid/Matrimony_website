@@ -2,8 +2,8 @@
 include("db_connect.php");
 session_start();
 if (isset($_POST["submit"])) {
-    $image=addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-    $imagetype= $_FILES["image"]["type"];
+    $image = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
+    $imagetype = $_FILES["image"]["type"];
     $username = $_SESSION['username'];
     $fullname = $_POST["name"];
     $dateofbirth = $_POST["dateofbirth"];
@@ -23,8 +23,8 @@ if (isset($_POST["submit"])) {
            `education`='$education',`annual_income`='$annual_income',`about_me`='$about_me',`occupation`='$occupation',
            `dob`='$dateofbirth',`age`=TIMESTAMPDIFF(YEAR,'$dateofbirth',CURDATE()) WHERE `uname`='$username'";
     $result = mysqli_query($conn, $sql);
-    $sql1="INSERT INTO `image_gallery` (`uname`,`image`,`image_type`) values ('$username','$image','$imagetype')";
-    $result1= mysqli_query($conn,$sql1);
+    $sql1 = "INSERT INTO `image_gallery` (`uname`,`image`,`image_type`) values ('$username','$image','$imagetype')";
+    $result1 = mysqli_query($conn, $sql1);
     if ($result && $result1)
         header("location:Partner_Preferences.php");
 }
