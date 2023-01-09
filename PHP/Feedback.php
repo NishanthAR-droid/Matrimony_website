@@ -50,7 +50,7 @@ if ($count == 1) {
           </li>
           <li><a href="Feedback.php">Feedback</a></li>
           <li><a href="userAboutUs.php">About us</a></li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="logout.php" onclick="return confirm('Do you want to logout?')">Logout</a></li>
         </ul>
       </nav>
     </div>
@@ -64,50 +64,41 @@ if ($count == 1) {
             cols="100"
             rows="10"
             placeholder="Give feedback"
-          ></textarea>
-          <div class="input">
-            <label for="Give rating">Give rating</label>
-          </div>
+          ></textarea><br>
+          <label for="Give rating" id="demo">Give rating</label>
+      <div class="rating">
+        <input id="demo-1" type="radio" name="rating" value="1"> 
+        <label for="demo-1">1 star</label>
+        <input id="demo-2" type="radio" name="rating" value="2">
+        <label for="demo-2">2 stars</label>
+        <input id="demo-3" type="radio" name="rating" value="3">
+        <label for="demo-3">3 stars</label>
+        <input id="demo-4" type="radio" name="rating" value="4">
+        <label for="demo-4">4 stars</label>
+        <input id="demo-5" type="radio" name="rating" value="5">
+        <label for="demo-5">5 stars</label>
+        
+        <div class="stars">
+            <label for="demo-1" aria-label="1 star" title="1 star"></label>
+            <label for="demo-2" aria-label="2 stars" title="2 stars"></label>
+            <label for="demo-3" aria-label="3 stars" title="3 stars"></label>
+            <label for="demo-4" aria-label="4 stars" title="4 stars"></label>
+            <label for="demo-5" aria-label="5 stars" title="5 stars"></label>   
         </div>
-        <div class="rating">
-          <label>
-            <input type="radio" name="rating" value="1" />
-            <span class="icon">★</span>
-          </label>
-          <label>
-            <input type="radio" name="rating" value="2" />
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-          </label>
-          <label>
-            <input type="radio" name="rating" value="3" />
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-          </label>
-          <label>
-            <input type="radio" name="rating" value="4" />
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-          </label>
-          <label>
-            <input type="radio" name="rating" value="5" />
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-            <span class="icon">★</span>
-          </label>
+      </div>
         </div>
+       
         <button type="submit" name="submit">Submit</button>
       </form>
     </div>
   </body>
   <script>
-    $(":radio").change(function () {
-      console.log("New star rating: " + this.value);
-    });
-  </script>
+        (function(){
+            var rating = document.querySelector('.rating');
+            var handle = document.getElementById('toggle-rating');
+            handle.onchange = function(event) {
+                rating.classList.toggle('rating', handle.checked);
+            };
+        }());
+    </script>
 </html>
