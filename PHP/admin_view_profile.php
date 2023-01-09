@@ -56,7 +56,7 @@ else {
         <ul>
           <li><a href="adminhome.php">Home</a></li>
           <li><a href="viewFeedback.php">View Feedback</a></li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="logout.php" onclick="return confirm('Do you want to logout?')">Logout</a></li>
         </ul>
       </nav>
     </div>

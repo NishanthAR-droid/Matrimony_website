@@ -42,8 +42,8 @@ if (!isset($_SESSION['username'])) {
               <label for="Female" class="form-input">Female</label>
             </div>
             <div class="sex-option">
-              <input type="radio" class="form-input" name="sex" value="Bi" id="checkfemale" />
-              <label for="Female" class="form-input">Bisexual</label>
+              <input type="radio" class="form-input" name="sex" value="B" id="checkfemale" />
+              <label for="Female" class="form-input">Both</label>
             </div>
             <div class="sex-option">
               <input type="radio" class="form-input" name="sex" value="O" id="checkothers" />

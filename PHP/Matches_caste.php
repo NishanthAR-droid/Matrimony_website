@@ -10,13 +10,15 @@ if (!isset($_SESSION['username'])) {
   $i = 1;
   $caste = $row['caste'];
   $sex = $row['sex'];
-  if ($sex == 'B') {
-    $sql1 = "SELECT *FROM `user_details` WHERE `caste`= '$caste' AND `sex`IN ('M','F') AND `uname`<> '$username'";
+  if ($sex == 'B')
+  {
+    $sql1 = "SELECT *FROM `user_details` WHERE `caste`= '$caste' AND `sex` IN ('M','F') AND `uname`<> '$username' ORDER BY `fname`";
     $result1 = mysqli_query($conn, $sql1);
     $count = mysqli_num_rows($result1);
-  } else {
-
-    $sql1 = "SELECT *FROM `user_details` WHERE `caste`= '$caste' AND `sex`='$sex' AND `uname`<> '$username'";
+  }
+  else
+  {
+    $sql1 = "SELECT *FROM `user_details` WHERE `caste`= '$caste' AND `sex`='$sex' AND `uname`<> '$username' ORDER BY `fname`";
     $result1 = mysqli_query($conn, $sql1);
     $count = mysqli_num_rows($result1);
   }
@@ -69,7 +71,7 @@ if (!isset($_SESSION['username'])) {
         </li>
         <li><a href="Feedback.php">Feedback</a></li>
         <li><a href="userAboutUs.php">About us</a></li>
-        <li><a href="logout.php">Logout</a></li>
+        <li><a href="logout.php" onclick="return confirm('Do you want to logout?')">Logout</a></li>
       </ul>
     </nav>
   </div>

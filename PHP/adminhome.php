@@ -5,7 +5,7 @@ if (!isset($_SESSION['username'])) {
 }
 else {
     $username = $_SESSION['username'];
-    $sql="SELECT * FROM `user_details`";
+    $sql="SELECT * FROM `user_details` ORDER BY `fname`";
     $result=mysqli_query($conn,$sql);
     $i=1;
 }
@@ -36,7 +36,7 @@ else {
         <ul>
           <li><a href="adminhome.php">Home</a></li>
           <li><a href="viewFeedback.php">View Feedback</a></li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="logout.php" onclick="return confirm('Do you want to logout?')">Logout</a></li>
         </ul>
       </nav>
     </div>
@@ -68,7 +68,7 @@ else {
             <td>
               <span class="action_button">
               <?php echo "<a href=\"admin_view_profile.php?id=$profile\">View Profile</a>";
-               echo "<a href=\"admin_delete_profile.php?id=$profile\">Delete Profile</a>"?>
+               echo "<a href=\"admin_delete_profile.php?id=$profile\"  onclick=\"return confirm('Do you want to delete this profile?')\">Delete Profile</a>"?>
               </span>
             </td>
           </tr>

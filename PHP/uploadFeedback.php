@@ -3,8 +3,8 @@ include("db_connect.php");
 session_start();
 if (isset($_POST["submit"])) {
     $username = $_SESSION['username'];
-    $rating = $_POST[""];
-    $feedback = $_POST[""];
+    $rating = $_POST["rating"];
+    $feedback = $_POST["feedback"];
 
     $sql = "SELECT *FROM `user_feedback` WHERE `uname`='$username'";
     $result = mysqli_query($conn, $sql);

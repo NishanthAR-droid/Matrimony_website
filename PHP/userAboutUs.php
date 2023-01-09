@@ -48,7 +48,7 @@ if (!isset($_SESSION['username'])) {
           </li>
           <li><a href="Feedback.php">Feedback</a></li>
           <li><a href="userAboutUs.php">About us</a></li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="logout.php" onclick="return confirm('Do you want to logout?')">Logout</a></li>
         </ul>
       </nav>
     </div>
