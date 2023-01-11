@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2023 at 06:41 PM
+-- Generation Time: Jan 11, 2023 at 05:11 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -232,6 +232,44 @@ INSERT INTO `user_preferences` (`uname`, `sex`, `minage`, `maxage`, `min_annual_
 ('shairley1', 'M', 23, 27, 1000000, 10000000, 'Sahotra', 'Christian', 'India', 'Karnataka', 'Bengaluru', 'Hindi'),
 ('sukhwinder1', 'F', 23, 27, 1000000, 10000000, 'Rajput', 'Sikh', 'India', 'Punjab', 'Ludhiana', 'Punjabi');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_views`
+--
+
+CREATE TABLE `user_views` (
+  `uname` varchar(30) NOT NULL,
+  `views` int(3) NOT NULL,
+  `search` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_views`
+--
+
+INSERT INTO `user_views` (`uname`, `views`, `search`) VALUES
+('abhaya1', 0, 0),
+('aisha1', 0, 0),
+('ashnoor1', 0, 0),
+('fariya1', 0, 0),
+('fathima1', 0, 0),
+('jash1', 0, 0),
+('javed1', 0, 0),
+('kruthik1', 0, 0),
+('marvin1', 0, 0),
+('nid123', 0, 0),
+('nishanth1', 0, 0),
+('prajwal1', 0, 0),
+('prerana1', 0, 0),
+('rahul', 0, 0),
+('rahul2', 0, 0),
+('sakha1', 0, 0),
+('salman1', 0, 0),
+('sameer1', 0, 0),
+('shairley1', 0, 0),
+('sukhwinder1', 0, 0);
+
 --
 -- Indexes for dumped tables
 --
@@ -267,6 +305,12 @@ ALTER TABLE `user_preferences`
   ADD PRIMARY KEY (`uname`);
 
 --
+-- Indexes for table `user_views`
+--
+ALTER TABLE `user_views`
+  ADD PRIMARY KEY (`uname`);
+
+--
 -- Constraints for dumped tables
 --
 
@@ -293,6 +337,12 @@ ALTER TABLE `user_feedback`
 --
 ALTER TABLE `user_preferences`
   ADD CONSTRAINT `user_preferences_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `user_login` (`uname`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user_views`
+--
+ALTER TABLE `user_views`
+  ADD CONSTRAINT `user_views_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `user_login` (`uname`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

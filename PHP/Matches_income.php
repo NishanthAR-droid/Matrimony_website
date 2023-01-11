@@ -70,6 +70,7 @@ if (!isset($_SESSION['username'])) {
         </li>
         <li><a href="Feedback.php">Feedback</a></li>
         <li><a href="userAboutUs.php">About us</a></li>
+        <li><a href="notification.php">Notifications</a></li>
         <li><a href="logout.php" onclick="return confirm('Do you want to logout?')">Logout</a></li>
       </ul>
     </nav>
@@ -88,7 +89,14 @@ if (!isset($_SESSION['username'])) {
       </thead>
       <tbody>
         <?php while ($row1 = mysqli_fetch_assoc($result1)) {
-          $viewprofile = $row1['uname']; ?>
+          $viewprofile = $row1['uname'];
+          $sql0 = "SELECT *FROM `user_views` where `uname`='$viewprofile'";
+          $result0 = mysqli_query($conn, $sql0);
+          $row0 = mysqli_fetch_assoc($result0);
+          $search = $row0['search'];
+          $search += 1;
+          $sql3 = "UPDATE `user_views` SET `search`='$search' where `uname`='$viewprofile'";
+          $result3 = mysqli_query($conn, $sql3); ?>
           <tr>
             <td><?php echo $i;
             $i++; ?></td>

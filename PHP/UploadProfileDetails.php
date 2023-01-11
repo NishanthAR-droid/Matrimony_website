@@ -18,6 +18,9 @@ if (isset($_POST["submit"])) {
     $annual_income = $_POST["annual_income"];
     $occupation = $_POST["occupation"];
     $about_me = $_POST["aboutme"];
+    $i = 0;
+    $sql0 = "INSERT INTO `user_views` (`uname`,`views`,`search`) values ('$username','$i','$i')";
+    $result0 = mysqli_query($conn, $sql0);
     $sql = "UPDATE `USER_DETAILS` SET `fname`='$fullname',`sex`='$sex',`mother_tongue`='$mother_toungue',
            `religion`='$religion',`caste`='$caste',`country`='$country',`city`='$city',`state`='$state',
            `education`='$education',`annual_income`='$annual_income',`about_me`='$about_me',`occupation`='$occupation',
