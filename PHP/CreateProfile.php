@@ -36,16 +36,6 @@ if (!isset($_SESSION['username'])) {
             <label for="Name">Full Name</label>
             <input type="text" name="name" class="form-input" placeholder="Enter full name" required />
           </div>
-          <!-- <div class="form--input">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="123@gmail.com"
-                class="form-input"
-                required
-              />
-            </div> -->
           <div class="form--input" id="DateOfBirth">
             <label for="DateOfBirth">Date of birth</label>
             <input type="date" name="dateofbirth" class="form-input" min="1950-12-31" max="2004-12-31" required />

@@ -52,7 +52,7 @@ if (!isset($_SESSION['username'])) {
             <tbody>
                 <?php while ($row1 = mysqli_fetch_assoc($result1)) {
                     $uname = $row1['uname'];
-                    $sql = "SELECT * FROM `user_details` WHERE `uname`='$uname' ORDER BY `fname`";
+                    $sql = "SELECT * FROM `user_details` WHERE `uname`='$uname'";
                     $result = mysqli_query($conn, $sql);
                     $row = mysqli_fetch_assoc($result);
                      ?>

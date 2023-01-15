@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
       </thead>
       <tbody>
         <?php while ($row = mysqli_fetch_assoc($result)) {
-          $profile = $row['uname']; ?>
+          $profile = $row['uname']; ?> <!--$profile is for viewing or deleting profile of that user-->
           <tr>
             <td><?php echo $i;
             $i++; ?></td>
