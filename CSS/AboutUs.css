@@ -83,10 +83,11 @@ nav ul li a:hover {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .para {
+  padding: 20px;
   background: linear-gradient(to right, #92dce5, #00fbff);
 }
 
