@@ -1,4 +1,4 @@
-# Online Matrimonial Website
+# Matrimonial Website
 
 An online matrimonial platform that helps individuals find their potential life partners according to their preferences. This project brings the concept of matchmaking online, allowing users to create profiles, browse other profiles, and search for matches based on various criteria like age, gender, religion, and caste.
 
@@ -22,3 +22,22 @@ An online matrimonial platform that helps individuals find their potential life 
 * Register by filling out personal details and uploading a profile picture.
 * Search for profiles using filters like age, gender, religion, and caste.
 * View detailed profiles of other users and find potential matches.
+
+## Screenshots
+
+**Home Page:**
+![Home Page](Screenshots/Picture1.png)
+
+**Registration page:**
+![Registration page](Screenshots/Picture2.png)
+
+**Login page:**
+![Login Page](Screenshots/Picture3.png)
+
+**Profile:**
+![Profile Page](Screenshots/Picture4.png)
+
+**Search Results:**
+![Search Page](Screenshots/Picture5.png)
+
+
